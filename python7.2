@@ -1,0 +1,12 @@
+t = 0
+c = 0
+fh = input("Enter file name:")
+fn = open(fh)
+for line in fn:
+    if line.startswith("X-DSPAM-Confidence:"):
+        p = line.find(":")
+        number = line[p+1:]
+        t = t + float(number)
+        c = c + 1
+ag = t/c
+print("Average spam confidence:", ag)

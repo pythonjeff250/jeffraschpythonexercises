@@ -1,0 +1,13 @@
+cegg = 0
+fn = input("Enter file name:")
+if fn == "Na na boo boo":
+  print("Enjoy your cadbury egg, sucker.")
+  quit()
+try:
+  fh = open(fn)
+except:
+  print("That file doesn't exist")
+  quit()
+for line in fh:
+    cegg = cegg+1
+print("There are", cegg, "Lines in", fn)
